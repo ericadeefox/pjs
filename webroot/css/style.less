@@ -17,7 +17,7 @@ img {
 }
 
 h1, h2, h3, h4, h5, h6 {
-    color: #FFFFFF;
+    color: #000000;
     margin-top: .5rem;
 }
 
@@ -25,11 +25,12 @@ h1 a,
 h3 a,
 h4 a,
 h5 a {
-    color: #FFFFFF;
+    color: #000000;
 }
 
 a {
     color: #120000;
+    text-decoration: underline;
 }
 
 h1,
@@ -41,11 +42,10 @@ h1,
 a:active,
 a:hover {
     color: #999 !important;
-    text-decoration: none !important;
 }
 
 .article {
-    border-bottom: #FFFFFF 1px solid;
+    border-bottom: #000000 1px solid;
     margin: 25px 10px;
     padding: 20px;
 }
@@ -53,13 +53,13 @@ a:hover {
 body {
     background-color: #767676;
     background-size: 100% 100%;
-    color: #FFFFFF;
+    color: #000000;
     font-family: @TextFont;
     font-weight: 400;
 }
 
 .content {
-    border-bottom: #FFFFFF 1px solid;
+    border-bottom: #000000 1px solid;
     margin: 10px auto;
     padding: 20px;
 }
@@ -78,7 +78,7 @@ body {
 }
 
 #header {
-    border-bottom: #FFFFFF 1px solid;
+    border-bottom: #000000 1px solid;
     position: fixed;
     text-align: center;
     top: 0;
@@ -88,12 +88,12 @@ body {
 
 .header-link,
 .logo-no-sidebar {
-    color: #FFFFFF;
+    color: #000000;
     text-decoration: none;
 }
 
 .header-link {
-    color: #ffffff !important;
+    color: #000000 !important;
     font-size: 25px;
 }
 
@@ -106,7 +106,7 @@ body {
 }
 
 .logo-no-sidebar {
-    color: #FFFFFF;
+    color: #000000;
     font-size: 35px;
     font-weight: 700;
     position: relative;
@@ -118,7 +118,7 @@ body {
 }
 
 .navbar {
-    background-color: #000000;
+    background-color: #FFFFFF;
     img {
         height: 50px !important;
         padding: 5px;
@@ -167,8 +167,15 @@ p {
 }
 
 // home
+footer {
+    position: absolute;
+    bottom: 0;
+    overflow: hidden;
+    width: 100%;
+    left: 0;
+}
 #home-content {
-    background-color: #000000;
+    background-color: #FFFFFF;
     display: table;
     min-height: 100vh;
     position: relative;
@@ -195,22 +202,25 @@ p {
     }
     ul {
         list-style: none;
+        li:before {
+            content: '✓';
+        }
     }
 }
 #home-header {
     align-items: center;
-    color: #000000;
+    color: #FFFFFF;
     display: table;
     height: 100vh;
     position: absolute;
     width: 100%;
     .inner-header {
         h1 {
-            color: #FFF;
+            color: #000000;
             font-size: 100px;
         }
         h2 {
-            color: #FFF;
+            color: #000000;
             font-size: 50px;
         }
     }

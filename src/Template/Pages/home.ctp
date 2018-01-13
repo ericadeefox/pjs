@@ -5,7 +5,7 @@
 <div id="home-header" align="center">
     <div class="inner-header">
         <h1>
-            RIPPED FROM THE ROOTS
+            PJS Honest Auto
         </h1>
         <h2 class="accent-font">
             <i>
@@ -15,37 +15,56 @@
     </div>
 </div>
 <div id="home-content" align="center">
-    <?= $this->element('header') ?>
     <div class="inner-content">
         <h1>
-            WHO IN FUCK ARE RIPPED FROM THE ROOTS?
+            Welcome to PJS Honest Auto!
         </h1>
         <p>
-            Ripped From the Roots is just some bogus two-piece folk/country band. It was started in Monty & Pat's living room in
-            the modular home down in Farmersburg in 2016 as a way for two friends to cope with the day-to-day realities of being Super Fucking Midwestern.
-            Their songs were written to answer questions they had about the Midwestern condition:
+            Our names are Patrick, James, and Sam. We're three fathers, friends, and pretty cool dudes. We also happen to be automotive
+            technicians with almost fifty years of combined automotive experience between us. In 2017, we decided to open our own shop and
+            continue our mission of providing reliable, economical, and honest automotive work to the East Central Indiana region.
+        </p>
+        <p>
+            At PJS, we understand the inconvenience and frustration that can come with automotive maintenance. We especially understand
+            how hard it can be to find a trustworthy mechanic that offers honest customer service, competitive shop prices, and an overall
+            friendly experience. That's why we opened PJS, and why we promise to always...
         </p>
         <ul>
-            <li><i>"How does a community cope with making headlines for cooking meth at Walmart?"</i></li>
-            <li><i>"Should you get sober after all your bandmates get mad at you on Thanksgiving in Evansville?"</i></li>
-            <li><i>"What are spoons for, really?" <u>(SPOONS ARE JUST FOR EATING.)</u></i></li>
+            <li><i>provide honest customer service to every one of our customers. (Even the females.)</i></li>
+            <li><i>offer competitive shop prices on all of our repairs, including specials on common and seasonal repairs.</i></li>
+            <li><i>make sure each PJS customer has a warm, friendly experience at our shop.</u></i></li>
         </ul>
         <div class="row">
-            <div class="col-lg-6">
-                <a href="https://indianapublicradio.org/news/2017/06/heroin-takes-top-spot-in-former-meth-city-as-muncie-rallies">
-                    <img src="/img/meth-city.png" alt="Montana Wildhack from Ripped From the Roots passes the microphone to Siren, “the official Ripped From the Roots baby” at Muncie’s Make Music, Not Meth."/>
-                    <span class="sr-only">Heroin Takes Top Spot in Former Meth City as Muncie Rallies Against Drugs</span>
-                </a>
+            <div class="col-lg-4">
+                <div class="fb-page" data-href="https://www.facebook.com/pjshonestauto/" data-tabs="timeline" data-width="300px" data-height="auto" data-small-header="true" data-adapt-container-width="true" data-hide-cover="true" data-show-facepile="true"><blockquote cite="https://www.facebook.com/pjshonestauto/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/pjshonestauto/">PJS Honest Auto</a></blockquote></div>
             </div>
-            <div class="col-lg-6">
-                <iframe src="https://embed.spotify.com/?uri=spotify%3Aartist%3A6xs0eBsjTS2XTSDwHhMiSu" width="300" height="380" frameborder="0" allowtransparency="true"></iframe>
+            <div class="col-lg-4">
+                <?= $this->element('contact_form') ?>
+            </div>
+            <div class="col-lg-4">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3052.1225700548775!2d-85.66416408501999!3d40.09498007940382!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8814d9a2cde6cb29%3A0x2a29e8e90af04354!2s2126+Pitt+St%2C+Anderson%2C+IN+46016!5e0!3m2!1sen!2sus!4v1515885270743" width="100%" height="500px" frameborder="0" style="border:0" allowfullscreen></iframe>
             </div>
         </div>
         <p>
-            Exploiting Monty's knack for storytelling and Pat's gifted way around a guitar, Ripped From
-            the Roots offers commentary on the downfall, stagnation, and rebuilding of their beloved region: the Rust Belt. Their objective is to tell the
-            honest truth about what it's like to live in a community nobody cares about except the people who live there. This is not just their
-            story, but the collective story of all of us living in America's Hometown.
+            Be sure to follow our Facebook page or our website for the latest deals! We frequently run specials on common repairs, to make
+            sure that your routine maintenance is as easy and as economical for you as possible. We are also open to discuss customization,
+            for when your tax check comes in and you haven't prioritized your life as well as you maybe should. So come to PJS Honest Auto,
+            for all of <i>your</i> automotive needs.
         </p>
     </div>
+    <footer>
+        <div class="row">
+            <div class="col-lg-4">
+                PJS Honest Auto
+            </div>
+            <div class="col-lg-4">
+                2126 Pitt St. Anderson, Ind. 46016
+            </div>
+            <div class="col-lg-4">
+                <a href="tel:+17652838979">
+                    (765) 283-8979
+                </a>
+            </div>
+        </div>
+    </footer>
 </div>

@@ -3,7 +3,7 @@
     <span class="navbar-toggler-icon"></span>
   </button>
   <?php if ($this->request->getParam('action') != 'home'): ?>
-    <?= $this->Html->link('Ripped From the Roots',
+    <?= $this->Html->link('PJS Honest Auto',
       ['controller' => 'Pages', 'action' => 'home'],
       [
           'class'=>'logo-no-sidebar accent-font',
@@ -30,7 +30,7 @@
       </ul>
       <ul class="navbar-nav float-right">
           <li class="nav-item">
-              <a href="https://www.facebook.com/rippedfromtheroots">
+              <a href="https://www.facebook.com/pjshonestauto">
                   <img src="/img/icons/facebook.png" />
                   <span class="sr-only">
                       Visit our Facebook Page
@@ -41,7 +41,7 @@
               <a href="https://www.youtube.com/results?search_query=ripped+from+the+roots+muncie">
                   <img src="/img/icons/you-tube.png" />
                   <span class="sr-only">
-                      Check us out on Youtube
+                      Check out my wife's band on Youtube
                   </span>
               </a>
           </li>

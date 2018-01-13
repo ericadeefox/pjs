@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <?= $this->Html->charset() ?>
     <title>
-        Ripped From the Roots
+        PJS Honest Auto
         <?php if (isset($titleForLayout)): ?>
             - <?= $titleForLayout ?>
         <?php else: ?>
@@ -69,6 +69,16 @@
     <script>$.fn.modal || document.write('<script src="js/bootstrap.min.js">\x3C/script>')</script>
 </head>
 <body>
+    <?php if ($this->request->getParam('action') == 'home'): ?>
+        <div id="fb-root"></div>
+        <script>(function(d, s, id) {
+                var js, fjs = d.getElementsByTagName(s)[0];
+                if (d.getElementById(id)) return;
+                js = d.createElement(s); js.id = id;
+                js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.11&appId=334856965611';
+               fjs.parentNode.insertBefore(js, fjs);
+            }(document, 'script', 'facebook-jssdk'));</script>
+    <?php endif ?>
     <?= $this->fetch('content') ?>
     <noscript>
         <div id="noscript">

@@ -15,9 +15,8 @@
 namespace App\Controller;
 
 use Cake\Core\Configure;
-use Cake\Network\Exception\ForbiddenException;
-use Cake\Network\Exception\NotFoundException;
-use Cake\View\Exception\MissingTemplateException;
+use Cake\Mailer\Email;
+use Cake\Validation\Validator;
 
 /**
  * Static content controller
@@ -38,13 +37,46 @@ class PagesController extends AppController
     {
         $bg = ['bg-01.jpg', 'bg-02.jpg', 'bg-03.jpg'];
         $tagline = [
-            'Midwestern music for humans who love living in the Midwest',
-            'say "ope" one more time motherfucker',
-            "Indiana's favorite shitpost country band"
+            'good, honest repairs for good, honest folks',
+            'we screw sockets, not our customers',
+            'because your mechanic should make you happy'
         ];
         $i = rand(0, count($bg)-1);
         $selectedBg = "$bg[$i]";
         $selectedTag = "$tagline[$i]";
         $this->set(compact('selectedBg', 'selectedTag'));
+
+        $validator = new Validator();
+        $validator
+            ->requirePresence('name')
+            ->notEmpty('name', 'Please tell us who you are.')
+            ->requirePresence('email')
+            ->notEmpty('email', 'Please provide a valid email address. Otherwise, we can\'t respond back.')
+            ->requirePresence('body')
+            ->notEmpty('body', 'Don\'t forget to write a message.');
+        if ($this->request->is('post')) {
+            $this->set($this->request->getData());
+
+            $errors = $validator->errors($this->request->getData());
+            if (empty($errors)) {
+                $email = new Email('contact_form');
+                $email->setFrom([$this->request->getData('email') => $this->request->getData('name')])
+                    ->setTo('pjshonestauto@gmail.com')
+                    ->setSubject('PJS Honest Auto contact form: ' . $this->request->getData('subject'));
+                if ($email->send($this->request->getData('body'))) {
+                    $this->Flash->success('Thanks for contacting us. We will try to respond to your message soon.');
+
+                    return null;
+                } else {
+                    $this->Flash->error('There was some problem sending your email.
+                         It could be a random glitch, or something could be permanently
+                         broken. Please contact <a href="mailto:pjshonestauto@gmail.com">pjshonestauto@gmail.com</a> for assistance.');
+
+                    return null;
+                }
+            }
+        }
+
+        return null;
     }
 }

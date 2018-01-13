@@ -1,0 +1,1 @@
+<?= $this->element('articles/index');
